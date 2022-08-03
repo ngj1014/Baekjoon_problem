@@ -41,12 +41,13 @@ for _ in range(m):
     adj[x].append(y)
     adj[y].append(x)
 
+
 def dfs(now_pos):
     global count
     count+=1
     visited[now_pos]=1
     for next_pos in adj[now_pos]:
-        if visited[next_pos]==1:
+        if visited[next_pos]==0:
             dfs(next_pos)
 
 
